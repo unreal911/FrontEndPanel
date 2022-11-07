@@ -1,0 +1,91 @@
+/*
+Template Name: Admin pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*
+Template Name: Admin Pro Admin
+Author: Wrappixel
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+/*Theme Colors*/
+/*bootstrap Color*/
+/*Light colors*/
+/*Normal Color*/
+/*Extra Variable*/
+/*******************
+Login register and recover password Page
+******************/
+.login-register {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  padding: 10% 0;
+  position: fixed; }
+
+.login-box {
+  width: 400px;
+  margin: 0 auto; }
+  .login-box .footer {
+    width: 100%;
+    left: 0px;
+    right: 0px; }
+  .login-box .social {
+    display: block;
+    margin-bottom: 30px; }
+
+#recoverform {
+  display: none; }
+
+.login-sidebar {
+  padding: 0px;
+  margin-top: 0px; }
+  .login-sidebar .login-box {
+    right: 0px;
+    position: absolute;
+    height: 100%; }
+
+
+    /*para los inputs */
+    /* You can add global styles to this file, and also import other style files */
+.form__input{
+  display: block;
+
+  padding: .5rem 2rem;
+  border-radius: 5px;
+  border: 0;
+  outline: solid 1px #ced4da;
+
+}
+.form__label{
+  transition: all .5S;
+  position: absolute;
+  top: 23px;
+  left: 2rem;
+  background-color: white;
+  padding: 0 .5rem;
+  color:#6c757d;
+
+}
+.form__box{
+  position: relative;
+  padding: 1rem;
+}
+.form__input:focus{
+  outline: solid 2px #0d6efd;
+}
+.form__input:focus+.form__label{
+  transform: translateY(-1.2rem);
+
+  font-size: 15px;
+  color: #0d6efd;
+}
+.form__input:not(:placeholder-shown)+.form__label{
+  transform: translateY(-1.2rem);
+  font-size: 15px;
+}
+
