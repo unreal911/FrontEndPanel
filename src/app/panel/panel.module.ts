@@ -6,7 +6,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MatenimientoComponent } from './pages/matenimiento/matenimiento.component';
 import { SharedModule } from '../shared/shared.module';
 import { ControlComponent } from './pages/usuario/control/control.component';
-
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { ControlComponent } from './pages/usuario/control/control.component';
   imports: [
     CommonModule,
     PanelRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
 
   ]
 })
