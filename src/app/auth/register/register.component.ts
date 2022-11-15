@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { AuthService } from 'src/app/panel/services/auth.service';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -34,7 +34,24 @@ export class RegisterComponent implements OnInit {
       return;
     }
     this.authService.crearUsuario(this.registerForm.value).subscribe((resp) => {
-      console.log(resp)
+      Swal.fire({
+        title: 'Bien!',
+        text: 'Se ha creado el usuario exitosamente',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+    },(err)=>{
+      console.log(err.error.errors)
+      let campo =  err.error.errors
+      for (const i in campo) {
+        console.log(campo[i])
+        Swal.fire({
+          title: 'Error',
+          text: campo[i].msg,
+          icon: 'info',
+          confirmButtonText: 'Cool'
+        })
+      }
     })
     console.log(this.registerForm.value)
   }
